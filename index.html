@@ -9,6 +9,12 @@
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="//platform.linkedin.com/in.js">
       api_key:   78wjegunoeh4lh
+      onLoad: apiLoaded
+  </script>
+  <script>
+    function apiLoaded(x) {
+      console.log('api loaded', x);
+    }
   </script>
 </head>
 
