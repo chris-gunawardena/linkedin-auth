@@ -14,11 +14,16 @@
   <script>
     function apiLoaded(x) {
       console.log('api loaded', x);
+      IN.Event.on(IN, "auth", () => {
+       IN.API.Raw("/people/~")
+         .result((data) => console.log(data))
+         .error((error) => console.log(error));
+      });
     }
   </script>
 </head>
 
 <body>
-
+  <script type="in/Login"></script>
 </body>
 </html>
